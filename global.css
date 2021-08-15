@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@font-face{
+	font-family:'digital-clock-font';
+	src: url('fonts/digital.ttf');
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+*{
+	box-sizing: border-box;
+}
+
+body {
+	color: #333;
+	font-size: 0.6em;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	background-image: url("img/bg.png");
+}
+
+body{
+	--color-black: black;
+	--color-white: #FFF;
+	--color-red: #af2120;
+	--color-red-warm: #fff2f2;
+	--color-yellow-dim: #e3c351;
+	--color-yellow: #ffd90b;
+	--color-yellow-bright: #fffa00;
+	--color-orange: #d0623d;
+	--color-orange-warm: #fff2ee;
+	
+	--color-brown: #71573a;
+
+	--color-blue: #618ecf;
+	--color-blue-lightest: #e7f2fe;
+	--color-blue-lighter: #a8d2ff;
+	--color-blue-light: #86a9cf;
+	--color-blue-sky-light: #59d9ff;
+	--color-blue-sky-dark: #5986ff;
+
+	--color-green: #448241;
+	--color-green-light: #3eaf39;
+	--color-green-lighter: #cfffcb;
+	--color-green-warm: #f1fff0;
+
+	--color-grey-5: #e6e6e6;
+	--color-grey-6: #858585;
+	--color-grey-7: #5a5a5a;
+
+	--font-size-smallest: 0.6em;	
+	--font-size-smaller: 0.8em;	
+	--font-size-small: 0.9em;
+	--font-size-medium: 1.3em;
+	--font-size-large: 2.2em;
+	--font-size-larger: 3em;
+	--font-size-largest: 4.5em;
+
+	--potium-height: 60px;
+	--potium-border: 7px;
+	--border-width: 8px;
+	--border-width-thick: 10px; 
+
+	--action-buttons-height: 50px;
+
+}
+@media screen and (min-width: 650px) {
+	body{
+		--potium-height: 65px;
+		--action-buttons-height: 65px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+
+}
+@media screen and (min-width: 1900px) {
+
+}
+@media screen and (min-width: 3000px) {
+	body{
+		--potium-height: 100px;
+		--border-width: 8px;
+		--border-width-thick: 14px; 
+	}
+}
+
+
+.numbers{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.digital-clock{
+	font-family:'digital-clock-font';
+}
+
+progress {
+	-webkit-appearance: none;
+}
+
+.flex{
+	display: flex;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-just-end{
+	justify-content: flex-end;
+}
+
+.flex-just-center{
+	justify-content: center;
+}
+
+.flex-just-space-between{
+	justify-content: space-between;
+}
+
+.flex-center-center{
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-align-center{
+	align-items: center;
+}
+
+.flex-align-end{
+	align-items: flex-end;
+}
+
+.flex-grow-1{
+	flex-grow:1;
+}
+
+.fit-min{
+	min-width: -webkit-fit-content;
+	min-width: -moz-fit-content;
+	min-width: fit-content;
+}
+
+.width-max-content{
+	width: max-content;
+}
+
+
+.weight-100{
+	font-weight: 100;
+}
+.weight-200{
+	font-weight: 200;
+}
+.weight-300{
+	font-weight: 300;
+}
+.weight-400{
+	font-weight: 400;
+}
+.weight-500{
+	font-weight: 500;
+}
+.weight-600{
+	font-weight: 600;
+}
+.weight-700{
+	font-weight: 700;
+}
+.weight-800{
+	font-weight: 800;
+}
+.weight-900{
+	font-weight: 900;
+}
+
+.font-size-smaller{
+	font-size: var(--font-size-smaller);
+}
+.font-size-small{
+	font-size: var(--font-size-small);
+}
+
+.font-size-medium{
+	font-size: var(--font-size-medium);
+}
+
+.font-size-large{
+	font-size: var(--font-size-large);
+}
+.font-size-larger{
+	font-size: var(--font-size-larger);
+}
+
+.font-size-largest{
+	font-size: var(--font-size-largest);
+}
+
+button{
+	position: relative;
+	cursor: pointer;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: none;
+	background-color: none;
+}
+button:focus{
+	outline: none;
+}
+
+.podium-wrapper{
+	position: relative;
+	width: 100%;
+	max-width: 476px;
+	height: var(--potium-height);
+}
+.podium-wrapper a{
+	color: var(--color-green-lighter);
+}
+.podium-outer {
+	position: absolute;
+	width: 100%;
+	height: var(--potium-height);
+	background: var(--color-green);
+	border: var(--potium-border) solid var(--color-grey-5);
+	border-radius: 5px;
+	box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.40), inset 0px 2px 0px 3px #00000052; ;
+	-webkit-box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.40), inset 0px 2px 0px 3px #00000052;
+	-moz-box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.40), inset 0px 2px 0px 3px #00000052; 
+}
+.podium-content{
+	position: absolute;
+	width: 100%;
+	height: var(--potium-height);
+	font-weight: 700;
+}
+.podium-content span {
+	color: var(--color-green-lighter);
+}
+
+.podium-content p {
+	margin: 0;
+	color: var(--color-green-lighter);
+}
+
+.climber-wrapper{
+	position: absolute;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 0 13%;
+}
+
